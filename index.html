@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="empApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="emp.js"></script>
+</head>
+<body>
+    <div ng-controller="empCtrl">
+
+        <!-- <ul>
+            <input type="text" ng-model="searchbox">
+            <li ng-repeat="x in records|filter:searchbox">{{x.id}}</li>
+        </ul> -->
+        <table>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>Department</th>
+                <th>Job Role</th>
+                <th>Experince</th>
+              </tr>
+            <tr ng-repeat="x in records">
+
+              <td >{{x.id}}</td>
+              <td >{{x.Name}}</td>
+              <td >{{x.Gender}}</td>
+              <td >{{x.Salary}}</td>
+              <td >{{x.Department}}</td>
+              <td >{{x.Job_Role}}</td>
+              <td >{{x.Experince}}</td>
+             
+            </tr>
+        </table>
+
+    
+    </div> 
+
+  
+</body>
+</html>
